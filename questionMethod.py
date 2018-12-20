@@ -13,3 +13,19 @@ for i in range(len(a)):
 if (sum%11)==0:
     print("Legal ISBN") 
 else:print("Illegal ISBN")
+
+# birthday candles
+n = int(input())
+ar = input()
+# Complete the birthdayCakeCandles function below.
+def birthdayCakeCandles(ar):
+    ar = list(map(int, ar.split()))
+    max = ar[0]
+    count=0
+    for i in range(n):
+        if ar[i]>max:
+            max=ar[i]
+    for i in range(n):
+        if ar[i]==max:
+            count += 1
+    print(count)

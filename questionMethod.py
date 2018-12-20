@@ -29,3 +29,21 @@ def birthdayCakeCandles(ar):
         if ar[i]==max:
             count += 1
     print(count)
+
+# compare triplets
+a = input()
+b = input()
+a = list(map(int, a.split()))
+b = list(map(int, b.split()))
+# Complete the compareTriplets function below.
+def compareTriplets(a, b):
+    if __name__ == '__main__':
+        alice = 0
+        bob = 0
+        for i in range(3):
+            if(a[i]>b[i]):
+                alice += 1
+            elif(b[i]>a[i]):
+                bob += 1
+        print(alice, bob)
+compareTriplets(a, b)

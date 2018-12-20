@@ -47,3 +47,30 @@ def compareTriplets(a, b):
                 bob += 1
         print(alice, bob)
 compareTriplets(a, b)
+
+# Records breaking
+t = int(input())
+scores = input()
+scores = list(map(int, scores.split()))
+score = []
+len = 0
+for i in scores:
+  if i not in score:
+    score.append(i)
+    len += 1
+# Complete the breakingRecords function below.
+def breakingRecords(score):
+    if __name__ == '__main__':
+        count = 0
+        cont = 0
+        max = score[0]
+        min = score[0]
+        for i in range(len):
+            if(score[i]>max):
+                max = score[i]
+                count += 1
+            if(score[i]<min):
+                cont += 1
+                min = score[i]
+        print(count, cont)
+breakingRecords(score)

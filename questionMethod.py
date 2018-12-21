@@ -100,3 +100,12 @@ def deleteNode(head, position):
 	temp.next = newN
 	newN = head.next
 	return root
+
+# print a linked list in reverse
+def reversePrint(head):
+	list = []
+	while(head is not NULL):
+		list.append(head.data)
+		head = head.next
+	list = list.reverse()
+	print(list)

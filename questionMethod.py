@@ -58,6 +58,7 @@ for i in scores:
   if i not in score:
     score.append(i)
     len += 1
+
 # Complete the breakingRecords function below.
 def breakingRecords(score):
     if __name__ == '__main__':
@@ -74,3 +75,16 @@ def breakingRecords(score):
                 min = score[i]
         print(count, cont)
 breakingRecords(score)
+
+# Insert an element at a particular place in a linked list
+def insertNodeAtPosition(head, data, position):
+	root = head
+	count = 0
+	while(head is not NULL and count<(position-1)):
+		head = head.next
+		count += 1
+	newN=SinglyLinkedListNode(data)
+	temp = head.next
+	head.next = newN
+	newN.next = temp
+	return root

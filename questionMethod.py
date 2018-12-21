@@ -109,3 +109,22 @@ def reversePrint(head):
 		head = head.next
 	list = list.reverse()
 	print(list)
+
+# divisible sum pairs
+t = input()
+t = list(map(int, t.split()))
+n = t[0]
+k = t[1]
+ar = input()
+ar = list(map(int, ar.split()))
+
+# Complete the divisibleSumPairs function below.
+def divisibleSumPairs(n, k, ar):
+    if __name__ == '__main__':
+        count = 0
+        for i in range(n):
+            for j in range(i+1, n):
+                if((ar[i]+ar[j])%k==0):
+                    count += 1
+        print(count)
+divisibleSumPairs(n, k, ar)

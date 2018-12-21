@@ -88,3 +88,15 @@ def insertNodeAtPosition(head, data, position):
 	head.next = newN
 	newN.next = temp
 	return root
+
+# Delete a node
+def deleteNode(head, position):
+	root = head
+	i = 0
+	while(head is not NULL and i<(position-1)):
+		head = head.next
+		i += 1
+	temp = head.next
+	temp.next = newN
+	newN = head.next
+	return root

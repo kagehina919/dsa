@@ -128,3 +128,18 @@ def divisibleSumPairs(n, k, ar):
                     count += 1
         print(count)
 divisibleSumPairs(n, k, ar)
+
+# IceCreamParlor problem
+a = int(input())
+for i in range(a):
+    m=int(input())
+    n = int(input())
+    arr = input()
+    arr = list(map(int, arr.split()))
+    def icecreamParlor(m, arr):
+        if __name__ == '__main__':
+            for i in range(n):
+                for j in range(i+1, n):
+                    if(arr[j] + arr[i] == m):
+                        print(i+1, j+1)
+    icecreamParlor(m, arr)

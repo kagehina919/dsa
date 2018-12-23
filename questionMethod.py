@@ -202,3 +202,18 @@ def bigSorting(unsorted):
         print(*unsorted, sep = "\n")
 
 bigSorting(unsorted)
+
+#Camelcase
+s = input()
+s = list(s)
+# Complete the camelcase function below.
+def camelcase(s):
+    if __name__ == '__main__':
+        n = len(s)
+        count = 1
+        upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    for i in s:
+        if i in upper:
+            count += 1
+    print(count)
+camelcase(s)

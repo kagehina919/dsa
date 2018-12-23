@@ -187,3 +187,18 @@ def introTutorial(V, arr):
             if(arr[i] == V):
                 print(i)
 introTutorial(V, arr)
+
+# Big Sort
+t = int(input())
+unsorted = []
+for i in range(t):
+    n = int(input())
+    unsorted.append(n)
+
+# Complete the bigSorting function below.
+def bigSorting(unsorted):
+    if __name__ == '__main__':
+        unsorted.sort()
+        print(*unsorted, sep = "\n")
+
+bigSorting(unsorted)

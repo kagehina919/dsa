@@ -174,3 +174,16 @@ for i in range(t):
     arr = list(map(int, arr.split()))
     balancedSums(arr)
 
+# Intro Challenge
+V = int(input())
+n = int(input())
+arr = input()
+arr = list(map(int, arr.split()))
+
+# Complete the introTutorial function below.
+def introTutorial(V, arr):
+    if __name__ == '__main__':
+        for i in range(n):
+            if(arr[i] == V):
+                print(i)
+introTutorial(V, arr)

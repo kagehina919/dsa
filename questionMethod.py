@@ -143,3 +143,34 @@ for i in range(a):
                     if(arr[j] + arr[i] == m):
                         print(i+1, j+1)
     icecreamParlor(m, arr)
+
+# Sherlock and Arrays
+t = int(input())
+
+def balancedSums(arr):
+    equal = False
+    total = sum(arr)
+    if(n == 1):
+        equal = True
+    else:
+        for i in range(n):
+            suma = 0
+            sumb = 0
+            for k in range(0, i):
+                suma = suma + arr[k]
+            for j in range(i+1, n):
+                sumb = total-arr[i]-suma
+            if(suma == sumb):
+                equal = True
+                break
+    if(equal == True):
+        print('YES')
+    else:print('NO')
+    
+
+for i in range(t):
+    n = int(input())
+    arr = input()
+    arr = list(map(int, arr.split()))
+    balancedSums(arr)
+

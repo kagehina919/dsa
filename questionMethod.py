@@ -217,3 +217,38 @@ def camelcase(s):
             count += 1
     print(count)
 camelcase(s)
+
+# inlist
+n = int(input())
+for i in range(n):
+    s = input()
+    s = list(s)
+    def hackerrankInString(s):
+        if __name__ == '__main__':
+            counth = 0
+            counta = 0
+            countc = 0
+            countk = 0
+            counte = 0
+            countr = 0
+            countn = 0
+            for i in s:
+                if i == 'h':
+                    counth += 1
+                if i == 'a':
+                    counta += 1
+                if i == 'c':
+                    countc += 1
+                if i == 'k':
+                    countk += 1
+                if i == 'e':
+                    counte += 1
+                if i == 'r':
+                    countr += 1
+                if i == 'n':
+                    countn += 1
+            if(counta>=2 and counth>=1 and countc>=1 and counte>=1 and countk>=2 and countn>=1 and countr>=2):
+                print('YES')
+            else:print('NO')
+    hackerrankInString(s)
+

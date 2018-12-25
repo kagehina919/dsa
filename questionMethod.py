@@ -292,4 +292,25 @@ if __name__ == "__main__":
     arr = list(map(int, input().strip().split(' ')))
     insertionSort1(n, arr)
 
-
+# Array Manipulation
+def arrayManipulation(n, queries):
+    if __name__ == '__main__':
+        b = queries[0]
+        c = queries[1]
+        k = queries[2]
+        if(c < n-1):
+            for i in range(b, c+1):
+                li[i] += k
+        else:
+            for i in range(b, c):
+                li[i] += k
+        return li
+for i in range(a[1]):
+    queries = input()
+    queries = list(map(int, queries.split()))
+    arrayManipulation(n, queries)
+max = li[0]
+for i in range(1, n):
+    if(li[i] > max):
+        max = li[i]
+print(max)

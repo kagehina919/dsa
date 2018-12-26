@@ -136,4 +136,80 @@ int main() {
     return 0;
 }
 
+#https://www.hackerrank.com/challenges/c-tutorial-functions/problem
+#include <iostream>
+#include <cstdio>
+using namespace std;
 
+int max_of_four(int a, int b, int c, int d) {
+    int max = 0;
+    if(a>b && a>c && a>d){
+        max = a;
+    }
+    else if(b>a && b>c && b>d){
+        max = b;
+    }
+    else if(c>a && b<c && c>d){
+        max = c;
+    }
+    else{
+        max = d;
+    }
+    return max;
+}
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
+    return 0;
+}
+
+#https://www.hackerrank.com/challenges/c-tutorial-pointer/problem
+#include <stdio.h>
+
+void update(int *a,int *b) {
+    *a = *a + *b;
+    *b = 2*(*b) - *a;
+    if(*b < 0){
+        *b = -*b;
+    }
+    else{
+        *b = *b;
+    }
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
+
+#https://www.hackerrank.com/challenges/arrays-introduction/problem
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n;
+    int arr[n];
+    cin >> n;
+    for(int i = 0; i<=n; i++){
+        cin >> arr[i];
+    }
+    for(int j = 1; j<=n; j++){
+        cout << arr[n-j] << " ";
+    }
+    return 0;
+}

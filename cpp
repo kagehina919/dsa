@@ -244,6 +244,25 @@ int main() {
     return 0;
 }
 
+#https://www.hackerrank.com/challenges/c-tutorial-strings/problem
+#include <iostream>
+#include <string>
+using namespace std;
 
+int main() {
+    string a, b;
+    cin >> a >> b;
+    int c = a.size();
+    int d = b.size();
+    cout << c << " " << d << endl;
+    string e = a + b;
+    cout << e << endl;
+    string f = b[0] + a;
+    string g = a[0] + b;
+    f.erase(f.begin() + 1);
+    g.erase(g.begin() + 1);
+    cout << f << " " << g << endl;
+    return 0;
+}
 
 

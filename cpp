@@ -359,3 +359,27 @@ int main() {
     return 0;
 }
 
+#https://www.hackerrank.com/challenges/classes-objects/problem
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <cassert>
+using namespace std;
+
+class Student {
+  private:
+    int scores[5];
+    int sum = 0;
+  public:
+    int calculateTotalScore() {
+		return sum;
+	}
+    void input() {
+        for(int i=0; i<5; i++) {
+            cin >> scores[i];
+            sum+=scores[i];
+        }
+    }
+};

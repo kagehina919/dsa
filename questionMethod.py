@@ -314,3 +314,23 @@ for i in range(1, n):
     if(li[i] > max):
         max = li[i]
 print(max)
+
+#Mars Exploration
+s = input()
+s = list(s)
+
+# Complete the marsExploration function below.
+def marsExploration(s):
+    if __name__ == '__main__':
+        count = 0
+        for i in range(len(s)):
+            a=i%3
+            if(a==0 and s[i]!='S'):
+                count += 1
+            elif(a==1 and s[i]!='O'):
+                count += 1
+            elif(a==2 and s[i]!='S'):
+                count += 1
+            else:continue
+        print(count)
+marsExploration(s)

@@ -383,3 +383,63 @@ class Student {
         }
     }
 };
+
+https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/algorithm/monk-and-prisoner-of-azkaban/
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define ll long long int
+
+stack <ll> st;
+ll front[1000001], back[1000001], arr[1000001];
+
+int main()
+{
+	ll n, i, x;
+	cin >> n;
+	for (i = 1; i <= n; i++) {
+	    cin >> arr[i];
+	}
+	
+	for (i = 1; i <= n; i++) {
+	    if (st.empty() || arr[st.top()] >= arr[i]) {
+	        st.push(i);
+	    } 
+	    else {
+	        while (!st.empty() && arr[st.top()] < arr[i]) {
+	            front[st.top()] = i;
+	            st.pop();
+	        }
+	        st.push(i);
+	    }
+	}
+	while (!st.empty()) {
+	    front[st.top()] = -1;
+	    st.pop();
+	}
+	
+	for (i = n; i > 0; i--) {
+	    if (st.empty() || arr[st.top()] >= arr[i]) {
+	        st.push(i);
+	    } 
+	    else {
+	        while (!st.empty() && arr[st.top()] < arr[i]) {
+	            back[st.top()] = i;
+	            st.pop();
+	        }
+	        st.push(i);
+	    }
+	}
+	while (!st.empty()) {
+	    back[st.top()] = -1;
+	    st.pop();
+	}
+	
+	for (i = 1; i <= n; i++) {
+	    printf("%lld ", front[i] + back[i]);
+	}
+	
+	return 0;
+}
+

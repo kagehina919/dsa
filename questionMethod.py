@@ -485,3 +485,14 @@ for i in range(n):
             break
     print(a[z], end = ' ')
 
+# 1d array
+a = int(input())
+b = input()
+
+lis = list(map(int, b.split()))
+
+for i in range(a-1):
+    if lis[i]>lis[i+1]:
+        if lis[i]>lis[i-1]:
+            print(lis[i], end = ' ')
+print(lis[a-1])

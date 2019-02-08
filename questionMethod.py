@@ -496,3 +496,9 @@ for i in range(a-1):
         if lis[i]>lis[i-1]:
             print(lis[i], end = ' ')
 print(lis[a-1])
+
+#print elements of a linked list
+def printLinkedList(head):
+    while head is not None:
+        print(head.data)
+        head = head.next

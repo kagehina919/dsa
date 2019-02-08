@@ -467,3 +467,21 @@ class Box{
     }
 };
 
+# Stacks attempt-1
+n = int(input())
+a = []
+for i in range(n):
+    c = int(input())
+    a.append(c)
+
+for i in range(n):
+    for j in range(i+1, n):
+        if a[i]>a[j]:
+            y = j
+            break
+    for k in range(y+1, n):
+        if a[y]<a[k]:
+            z = k
+            break
+    print(a[z], end = ' ')
+

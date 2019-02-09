@@ -502,3 +502,18 @@ def printLinkedList(head):
     while head is not None:
         print(head.data)
         head = head.next
+
+#Elements of array in reverse order
+n = int(input())
+b = input()
+b = list(map(int, b.split()))
+a = []
+for i in range(n):
+    a.append(b[i])
+
+# Complete the reverseArray function below.
+def reverseArray(a):
+    if __name__ == '__main__':
+        for i in range(n):
+            print(a[n-i-1], end = ' ')
+reverseArray(a)

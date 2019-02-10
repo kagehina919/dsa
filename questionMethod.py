@@ -517,3 +517,10 @@ def reverseArray(a):
         for i in range(n):
             print(a[n-i-1], end = ' ')
 reverseArray(a)
+
+# element at the head of a linked list
+def insertNodeAtHead(llist, data):
+    root = llist
+    newN=SinglyLinkedListNode(data)
+    newN.next=root
+    return newN

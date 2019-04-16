@@ -27,3 +27,4 @@
 27. https://www.hackerrank.com/challenges/arrays-ds/problem
 28. https://www.hackerrank.com/challenges/insert-a-node-at-the-head-of-a-linked-list/problem
 29. https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/life-the-universe-and-everything/
+30. https://www.hackerearth.com/practice/basic-programming/implementation/basics-of-implementation/practice-problems/algorithm/array-sum-2-725368ac/

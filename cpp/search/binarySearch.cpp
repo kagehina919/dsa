@@ -38,11 +38,7 @@ int main() {
         l = 0;
         h = N-1;
         while(l<=h) {
-            if((h+l)%2==0) {
-                med = (h+l)/2;
-            } else {
-                med = (h+l+1)/2;
-            }
+	    med = l + (h-l)/2;
             
             if(a[med] > c) {
                 h = med-1;

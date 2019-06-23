@@ -6,26 +6,25 @@ void Solution::merge(vector<int> &A, vector<int> &B) {
     int m = B.size();
     int i = 0;
     int j = 0;
-    while(i<n && j<m) {
+    while(i<n && j<m){
         if(A[i]<B[j]) {
-            C.push_back(A[i]);
-            i++;
+        C.push_back(A[i]);
+        i++;
         }
-        else if(B[j]<=A[i]) {
+        else if(A[i]>=B[j]) {
             C.push_back(B[j]);
             j++;
         }
     }
     if(i<n) {
-        for(int a=i;a<n;a++) {
+        for(int a = i;a<n;a++) {
             C.push_back(A[a]);
         }
     }
     if(j<m) {
-        for(int b=j;b<m;b++) {
+        for(int b = j;b<m;b++) {
             C.push_back(B[b]);
         }
-    }
     A = C;
 }
 

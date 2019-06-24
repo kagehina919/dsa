@@ -19,6 +19,22 @@ int equilibrium(int arr, int n) {
     return -1;
 }
 
+int equilib(int arr, int n) {
+    int sum = 0;
+    int sumL = 0;
+    for(int i=0;i<n;i++) {
+        sum += arr[i];
+    }
+    for(int i=0;i<n;++i) {
+        sum -= arr[i];
+        if(sum == sumL) {
+            return i;
+        }
+        sumL += arr[i];
+    }
+    return -1;
+}
+
 int main() {
     int arr[] = [1,2,3,3];
     int n = len(arr)

@@ -16,6 +16,16 @@ int leaders(int arr, int n) {
     }
 }
 
+int leaders2(int arr, int n) {
+    max = arr[n-1];
+    for(int i = n-2;i>=0;i--) {
+        if(max<arr[i]) {
+            max = arr[i];
+            cout << max << endl;
+        }
+    }
+}
+
 int main() {
     int arr[] = [1,2,3,4,3,5,2,6];
     int n = len(arr);

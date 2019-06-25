@@ -27,6 +27,44 @@ int findwater(int arr, int n) {
     return water;
 }
 
+// O(n) solution, with O(1) space complexity
+int findWater(int arr[], int n) 
+{ 
+    // initialize output 
+    int result = 0; 
+      
+    // maximum element on left and right 
+    int left_max = 0, right_max = 0; 
+      
+    // indices to traverse the array 
+    int l = 0, h = n-1; 
+      
+    while(l <= h)  
+    { 
+        if(arr[lo] < arr[hi]) 
+        { 
+            if(arr[l] > left_max) 
+            // update max in left 
+            left_max = arr[l]; 
+            else
+            // water on curr element = max - curr 
+            result += left_max - arr[l]; 
+            l++; 
+        } 
+        else
+        { 
+            if(arr[h] > right_max) 
+            // update right maximum 
+            right_max = arr[h]; 
+            else
+            result += right_max - arr[h]; 
+            h--; 
+        } 
+    } 
+      
+    return result; 
+} 
+
 int main() {
     int arr[] = [3,0,1,2,4];
     int res = findwater(arr, n);

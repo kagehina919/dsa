@@ -10,3 +10,10 @@ int main() {
     cout << arr[k-1];
     return 0;
 }
+
+// quick select method
+int swap(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}

@@ -1,6 +1,6 @@
 import operator
 
-int arr[] = [5,5,5,6,3,4,4,2,1]
+arr = [5,5,5,6,3,4,4,2,1]
 n = len(arr)
 dict = {}
 for i in range(0, n):

@@ -7,9 +7,9 @@ dict = {}
 
 for i in range(0, n):
     if(arr1[i] in dict):
-        dict(arr1[i]) += 1
+        dict[arr1[i]] += 1
     else:
-        dict(arr1[i]) = 1
+        dict[arr1[i]] = 1
 
 for i in range(0, m):
     if(arr2[i] in dict):

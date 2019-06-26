@@ -5,9 +5,9 @@ n = len(arr)
 dict = {}
 for i in range(0, n):
     if(arr[i] in dict):
-        dict(arr[i]) += 1
+        dict[arr[i]] += 1
     else:
-        dict(arr[i]) = 1
+        dict[arr[i]] = 1
 
 sorted_x = sorted(dict.items(), key=operator.itemgetter(1))
 

@@ -10,7 +10,7 @@ int main() {
     char *token = strtok(str, ".");
     while(token != NULL) {
         st.push_back(token);
-        token = strtok(NULL, "-");
+        token = strtok(NULL, ".");
         i++;
     }
     reverse(st.begin(), st.end());

@@ -13,3 +13,18 @@ int main() {
         }
     }
 }
+
+// general n^2 solution
+
+int main() {
+    string a;
+    cin >> a;
+    int n = len(a);
+    for(int i=0;i<n;i++) {
+        for(int j=i+1;j<n;j++) {
+            if(a[i] == a[j]) {
+                a.remove(a.begin()+j);
+            }
+        }
+    }
+}

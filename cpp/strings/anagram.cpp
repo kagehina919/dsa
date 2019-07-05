@@ -13,6 +13,12 @@ int main() {
     cin >> a;
     cin >> b;
     anagram(a, b);
+    sort(a.begin(), a.end());
+    sort(b.begin(), b.end());
+    if(a == b){
+        cout << "YES"<< endl;
+    }
+    else cout << "No" << endl;
     if(anagram(a, b)) cout<<"YES"<<endl;
     else cout<<"NO"<<endl;
 }

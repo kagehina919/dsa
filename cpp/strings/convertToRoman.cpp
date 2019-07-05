@@ -24,9 +24,7 @@ int convert(string a) {
         s1 = value(a[i]);
         if(i+1<len(a)) {
             int s2 = value(a[i+1]);
-            if(s2>s1) {
-                res = res+s1;
-            }
+            if(s2<=s1) res = res+s1;
             else res = res+s2-s1;
         }
         else res = res + s1;

@@ -7,10 +7,13 @@ def main():
     a = input()
     n = len(a)
     dict = {}
-    for i in range(n):
-        if a[i] in dict:
-            dict(a[i]) += 1
-        else:
-            dict(a[i]) = 1
-    b = len(dict)
-    print(b-1)
+    if a == reverse(a):
+        print("0")
+    else:
+        for i in range(n):
+            if a[i] in dict:
+                dict(a[i]) += 1
+            else:
+                dict(a[i]) = 1
+        b = len(dict)
+        print(b-1)

@@ -84,13 +84,11 @@ Node* sortedMerge(Node* head1,   Node* head2) {
         return(head1);  
       
     /* Pick either head1 or head2, and recur */
-    if (head1->data <= head2->data)  
-    {  
+    if (head1->data <= head2->data){  
         result = head1;  
         result->next = sortedMerge(head1->next, head2);  
     }  
-    else
-    {  
+    else {  
         result = head2;  
         result->next = sortedMerge(head1, head2->next);  
     }  

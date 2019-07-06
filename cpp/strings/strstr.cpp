@@ -27,3 +27,24 @@ int main() {
         return -1;
     }
 }
+
+// Using 2 pointers technique
+int main1() {
+    string s;
+    cin >> s;
+    string x;
+    cin >> x;
+    int sum = 0;
+    int n = len(s);
+    int m = len(x);
+    if(m>n) cout << -1 << endl;
+    for(int i=0;i<n;i++) {
+        int j = 0;
+        while(j<m && i<n && s[i] == x[j]) {
+            i++;
+            j++;
+        }
+        if(j == m) return (i-j+1);
+    }
+    return -1;
+}

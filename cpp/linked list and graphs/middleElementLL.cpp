@@ -1,6 +1,6 @@
 {
 // C program to find n'th Node in linked list
-#include <stdio.h>
+#include <bits/stdc++.h>
 #include <stdlib.h>
 #include<iostream>
 using namespace std;

@@ -68,20 +68,19 @@ struct Node {
     data = x;
     next = NULL;
   }
-};
+}
 */
 // Should reverse list and return new head.
 #include <bits/stdc++.h>
 Node* reverseList(Node *head) {
-    { 
-        Node *current = head; 
-        Node *prev = NULL, *next = NULL; 
-        while (current != NULL) {
-            next = current->next; 
-            current->next = prev;
-            prev = current; 
-            current = next; 
-        } 
-        head = prev; 
+    Node* current = head;
+    Node* next = NULL;
+    Node* prev = NULL;
+    while(current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
     }
+    head = prev;
 }

@@ -59,7 +59,7 @@ public :
 /*returns min element from stack*/
 int _stack :: getMin() {
     if(s.empty()) return -1;
-    int min = 1000000000;
+    long long int min = 1000000000;
     stack<int> st;
     while(!s.empty()) {
         if(s.top() < min) {
@@ -76,9 +76,12 @@ int _stack :: getMin() {
 }
 /*returns poped element from stack*/
 int _stack ::pop() {
-    int x = s.top();
-    s.pop();
-    return x;
+    if(!s.empty()) {
+        int x = s.top();
+        s.pop();
+        return x;
+    }
+    else return -1;
 }
 /*push element x into the stack*/
 void _stack::push(int x) {

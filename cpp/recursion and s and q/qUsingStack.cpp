@@ -48,11 +48,11 @@ public:
 }; */
 /* The method push to push element into the queue */
 void StackQueue :: push(int x) {
+    s1.push(x);
     while (!s1.empty()) { 
             s2.push(s1.top()); 
             s1.pop(); 
     } 
-    s1.push(x);
     while (!s2.empty()) { 
         s1.push(s2.top()); 
         s2.pop(); 

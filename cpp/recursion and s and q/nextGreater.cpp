@@ -19,6 +19,26 @@ int nextGreater(int arr[], int m) {
     cout << endl;
     return 0;
 }
+//
+stack<int> st;
+    st.push(arr[0]);
+    for(int i=0;i<m;i++) {
+        if (st.empty()) { 
+          st.push(arr[i]); 
+          continue; 
+        }
+        while (!st.empty() && st.top() < arr[i]) {          
+            cout << arr[i] << " "; 
+            st.pop(); 
+        }
+        st.push(arr[i]);
+    }
+    while (!st.empty()) { 
+        cout << -1 << " "; 
+        st.pop(); 
+      }
+    cout << endl;
+    return 0;
 
 int main() {
 	int n;

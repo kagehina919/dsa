@@ -19,7 +19,7 @@ int nextGreater(int arr[], int m) {
     cout << endl;
     return 0;
 }
-//
+// stack O(n) solution
 stack<int> st;
     st.push(arr[0]);
     for(int i=0;i<m;i++) {

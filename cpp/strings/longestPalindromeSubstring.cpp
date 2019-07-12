@@ -30,3 +30,26 @@ int main() {
     palindrome(s, n);
     return 0;
 }
+
+// worse case solution
+bool ispalin(string s) {
+    if(s.length()<=1) return 1;
+    for(int i=0;i<s.length();i++) {
+        if(s[i]!=s[s.length()-1-i]) return false;
+    }
+    return true;
+}
+
+
+string Solution::longestPalindrome(string A) {
+    string s="";
+    for(int i=0;i<A.length();i++) {
+        string a="";
+        if(A.length()-i > s.length())
+        for(int j=i;j<A.length();j++) {
+            a = a+A[j];
+            if(a.length()>s.length() && ispalin(a)) s = a;
+        }
+    }
+    return s;
+}

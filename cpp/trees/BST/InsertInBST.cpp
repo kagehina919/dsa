@@ -65,10 +65,10 @@ Node* insert(Node* node, int data) {
         return root;
     }
     if(data > node->data) {
-        insert(node->right, data);
+        node->right = insert(node->right, data);
     }
     else if(data < node->data) {
-        insert(node->left, data);
+        node->left = insert(node->left, data);
     }
     return node;
 }

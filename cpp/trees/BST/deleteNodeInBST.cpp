@@ -104,8 +104,7 @@ Node *deleteNode(Node *root,  int x) {
         else {
             Node* temp = minValueNode(root->right);
             root->data = temp->data;
-            root->right = deleteNode(root->right, temp->data); 
-
+            root->right = deleteNode(root->right, temp->data);
         }
     }
 }

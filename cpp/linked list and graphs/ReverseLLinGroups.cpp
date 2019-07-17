@@ -80,9 +80,9 @@ int main(void)
 */
 struct node *reverse (struct node *head, int k) {
     int count = 0;
-    Node* current = head;
-    Node* next = NULL;
-    Node* prev = NULL;
+    node* current = head;
+    node* next = NULL;
+    node* prev = NULL;
     while(current != NULL && count<k) {
         count++;
         next = current->next;
@@ -90,6 +90,6 @@ struct node *reverse (struct node *head, int k) {
         prev = current;
         current = next;
     }
-    current->next = reverse(next, k);
-    head = prev;
+    if (next != NULL) head->next = reverse(next, k);
+    return prev;
 }

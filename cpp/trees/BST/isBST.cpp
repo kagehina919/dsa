@@ -75,8 +75,6 @@ struct Node {
         left = NULL;
     }
 }; */
-#include <bits/stdc++.h>
-
 int isBSTUtil(Node* node, int min, int max) {
     if (node==NULL)  
         return 1;

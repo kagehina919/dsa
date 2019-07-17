@@ -90,6 +90,6 @@ struct node *reverse (struct node *head, int k) {
         prev = current;
         current = next;
     }
-    if (next != NULL) head->next = reverse(next, k);
+    if(next != NULL) head->next = reverse(next, k);
     return prev;
 }

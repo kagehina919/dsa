@@ -17,4 +17,4 @@ def main():
                     print("YES")
                     return 0
         print("NO")
-            
+a = list(map(int,input().split()))     

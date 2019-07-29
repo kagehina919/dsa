@@ -19,3 +19,12 @@ int main() {
         }
     }
 }
+
+// simple solution using stringstream.
+Solution::Atoi(const string A) {
+    stringstream ss;
+    ss >> i;
+    if(i<INT_MIN) i = INT_MIN;
+    if(i>INT_MAX) i = INT_MAX;
+    return i;
+}

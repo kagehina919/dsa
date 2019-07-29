@@ -7,8 +7,8 @@
  * };
  */
 ListNode* Solution::swapPairs(ListNode* A) {
-    int tmp;
     ListNode* head = A;
+    int tmp;
     while(A != NULL && A->next != NULL) {
         tmp = A->val;
         A->val = A->next->val;

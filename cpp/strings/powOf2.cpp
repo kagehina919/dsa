@@ -15,10 +15,7 @@ int Solution::power(string A) {
     string s = "1";
     while(true){
         s = mulby2(s);
-        // cout<<s<<endl;
-        if(A==s)
-            return 1;
-        if(s.size()>A.size())
-            return 0;
+        if(A==s) return 1;
+        if(s.size()>A.size()) return 0;
     }
 }
